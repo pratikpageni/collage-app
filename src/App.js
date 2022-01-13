@@ -23,9 +23,9 @@ const Section1 = () => {
     <div className="mx-3 my-6 ">
       <div className="flex ">
         <div className="w-1/5">
-          <div className="border bg-gray-400 rounded-lg">
+          <div className=" bg-gray-300 border rounded-lg">
             <div className="">
-              <div className="w-full flex justify-between">
+              <div className="font-serif w-full flex justify-between">
                 <a
                   onClick={() => {
                     setActive(false);
@@ -45,20 +45,20 @@ const Section1 = () => {
                   Apply
                 </a>
               </div>
-              <div className={`${active ? "" : "hidden"}`}>
+              <div className={`${active ? "" : "hidden "}`}>
                 {[0, 0, 0, 0].map((data, index) => {
                   return (
                     <p
                       key={index}
-                      className="border-2 bg-red-600 rounded-lg m-2 border-slate-300 px-2 "
+                      className=" font-mono bg-sky-300 text-white border-2  m-2 border-slate-300 px-2 "
                     >
-                      sdsd ds This is inform all that ads tommarwo is holiday
+                      This is inform all that ads tommarwo is holiday
                     </p>
                   );
                 })}
               </div>
               <div className={`${active ? "hidden" : ""} mx-2`}>
-                <div className="flex flex-col">
+                <div className="font-mono flex flex-col">
                   <label>Name</label>
                   <input
                     type="text"
