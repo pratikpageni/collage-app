@@ -1,7 +1,8 @@
 import React from "react";
 import { useState } from "react";
 import Header from "./Component/Header";
-import Carousel from "react-carousel-minimal/dist/components/Carousel";
+import Slide from "./Component/Slide";
+
 
 const App = () => {
   return (
@@ -94,58 +95,11 @@ const Section1 = () => {
             </div>
           </div>
         </div>
-        <div className="w-4/5">{/* <CarouselMain /> */}</div>
+        <div className="w-4/5">
+        <Slide/>
+          </div>
       </div>
     </div>
   );
 };
 
-const CarouselMain = () => {
-  const responsive = {
-    superLargeDesktop: {
-      // the naming can be any, depends on you.
-      breakpoint: { max: 4000, min: 3000 },
-      items: 1,
-    },
-    desktop: {
-      breakpoint: { max: 3000, min: 1024 },
-      items: 1,
-      partialVisibilityGutter: 40,
-    },
-    tablet: {
-      breakpoint: { max: 1024, min: 464 },
-      items: 1,
-    },
-    mobile: {
-      breakpoint: { max: 464, min: 0 },
-      items: 1,
-    },
-  };
-  return (
-    <Carousel
-      responsive={responsive}
-      slidesToSlide={1}
-      swipeable={true}
-      draggable={true}
-      showDots={true}
-      ssr={true} // means to render carousel on server-side.
-      infinite={true}
-      autoPlaySpeed={1000}
-      keyBoardControl={true}
-      transitionDuration={500}
-      containerClass="mx-auto border-2 container"
-      removeArrowOnDeviceType={["tablet", "mobile"]}
-      dotListClass="custom-dot-list-style"
-      itemClass="carousel-item-padding-40-px lg:h-80  "
-    >
-      {[0, 0, 0, 0].map((data, index) => {
-        return (
-          <div className="relative custom-carousal">
-            <img className="lg:h-80 h-40 w-full object-scale-fill" src="" />
-            <div className="absolute inset-0 z-50 bg-gray">lore</div>
-          </div>
-        );
-      })}
-    </Carousel>
-  );
-};
