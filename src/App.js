@@ -15,9 +15,8 @@ const App = () => {
 export default App;
 
 const Section1 = () => {
-  const [active, setActive] = useState(true);
+  const [active, setActive] = useState(false);
   const tabName = ["Notice", "Apply"];
-  const changeTab = (tab) => {};
 
   return (
     <div className="mx-3 my-6 ">
@@ -27,31 +26,37 @@ const Section1 = () => {
             <div className="">
               <div className="w-full flex justify-between">
                 <a
-                  onClick={changeTab(tabName[0])}
-                  className={`py-3 cursor-pointer text-black bg-gray-400  hover:bg-gray-300  text-center w-1/2 border-r-2 border-b-2 border-r-slate-300`}
+                  onClick={() => {
+                    setActive(false);
+                  }}
+                  className={`py-3 cursor-pointer text-black ${
+                    active ? "" : "bg-white"
+                  }   hover:bg-gray-300  text-center w-1/2 border-r-2 border-b-2 border-r-slate-300`}
                 >
                   Notice
                 </a>
                 <a
-                  onClick={changeTab(tabName[1])}
-                  className={`py-3 bg-white hover:bg-gray-300 hover:text-black border-b-2  cursor-pointer text-center w-1/2`}
+                  onClick={() => setActive(true)}
+                  className={`py-3  ${
+                    active ? "bg-white" : ""
+                  } hover:bg-gray-300 hover:text-black border-b-2  cursor-pointer text-center w-1/2`}
                 >
                   Apply
                 </a>
               </div>
-              <div className="hidden">
+              <div className={`${active ? "" : "hidden"}`}>
                 {[0, 0, 0, 0].map((data, index) => {
                   return (
                     <p
                       key={index}
-                      className="border-2  rounded-lg m-2 border-slate-300 px-2 "
+                      className="border-2 bg-red-600 rounded-lg m-2 border-slate-300 px-2 "
                     >
-                      This is inform all that ads tommarwo is holiday
+                      sdsd ds This is inform all that ads tommarwo is holiday
                     </p>
                   );
                 })}
               </div>
-              <div className="mx-2">
+              <div className={`${active ? "hidden" : ""} mx-2`}>
                 <div className="flex flex-col">
                   <label>Name</label>
                   <input
