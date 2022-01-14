@@ -51,7 +51,23 @@ const loginAdmin = async (req, res) => {
     });
   }
 };
+
+const updateUser = async (req, res) => {
+  const { adminid } = req.params;
+  const data = req.body;
+  const response = await User.findByIdAndUpdate(adminid, data);
+  if (response) {
+    res.json({
+      status: true,
+      message: "successfully updated",
+      data: response,
+    });
+  } else {
+    res.json({ status: false, message: "update fail user not found" });
+  }
+};
 module.exports = {
   signupController,
   loginAdmin,
+  updateUser,
 };
