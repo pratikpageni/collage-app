@@ -29,7 +29,7 @@ const Header = () => {
               </div>
            
           
-            <div className="text-xl space-x-4 w-6/12 py-5 justify-between font-serif mr-16">
+            <div className="text-xl text-black space-x-4 w-6/12 py-5 justify-between font-serif mr-16">
               <a href="">About</a>
               <a href="">Services</a>
               <a href="">Blog</a>
@@ -38,7 +38,7 @@ const Header = () => {
             </div>
                
           
-            <div className="py-2 w-3/12 my-2  flex justify-between ">
+            <div className="py-2 w-3/12 my-2  gap-2 flex justify-between ">
             <Link to="/login" >
               <button className="bg-blue-500 hover:bg-blue-700 py-2 text-white font-bold  px-9 border border-blue-700 rounded">
               login

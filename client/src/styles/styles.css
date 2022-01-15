@@ -3,7 +3,8 @@
 @tailwind utilities;
 
 @layer('utilities'){
-    .jit{
-        margin:1px;
-    }
+    
+    :root{
+        background-color: none !important; 
+      }
 }

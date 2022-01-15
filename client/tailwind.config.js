@@ -5,5 +5,14 @@ module.exports = {
   theme: {
     extend: {},
   },
-  plugins: [],
+  plugins: [require("daisyui")],
+
+  daisyui: {
+    themes: [
+      "forest",
+      "emerald", // first one will be the default theme
+      "dark",
+      "synthwave",
+    ],
+  },
 };

@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import Carousel from "flat-carousel";
 function Home() {
   return (
     <div>
@@ -34,7 +34,7 @@ const Section1 = () => {
                   onClick={() => setActive(false)}
                   className={`py-3  ${
                     active ? "bg-white" : ""
-                  } hover:bg-gray-300 hover:text-black border-b-2  cursor-pointer text-center w-1/2`}
+                  } hover:bg-gray-300 hover:text-black border-b-2 text-black cursor-pointer text-center w-1/2`}
                 >
                   Apply
                 </a>
@@ -89,8 +89,14 @@ const Section1 = () => {
             </div>
           </div>
         </div>
-        <div className="w-4/5">{/* <CarouselMain /> */}</div>
+        <div className="w-4/5">
+          <CarouselMain />
+        </div>
       </div>
     </div>
   );
+};
+
+const CarouselMain = () => {
+  return <div className=""></div>;
 };
